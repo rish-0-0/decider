@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Text, Pressable, StyleSheetProperties} from 'react-native';
+import {Text, Pressable} from 'react-native';
 
 interface RoundButtonProps {
   onPress: () => void;
@@ -7,7 +7,16 @@ interface RoundButtonProps {
   backgroundColor: string;
   padding?: number;
   borderRadius?: number;
-  style?: StyleSheetProperties;
+  style?: {
+    position?: 'absolute' | 'relative';
+    top?: number | string;
+    bottom?: number | string;
+    left?: number | string;
+    right?: number | string;
+    flex?: number;
+    justifyContent?: 'center';
+    alignItems?: 'center';
+  };
 }
 
 const RoundButton: React.FC<RoundButtonProps> = props => {
@@ -16,11 +25,11 @@ const RoundButton: React.FC<RoundButtonProps> = props => {
       onPress={props.onPress}
       style={({pressed}) => [
         {
-          padding: props.padding || 5,
           borderRadius: props.borderRadius || props.diameter / 2,
           width: props.diameter,
           height: props.diameter,
           backgroundColor: props.backgroundColor,
+          display: 'flex',
           ...props.style,
         },
       ]}>

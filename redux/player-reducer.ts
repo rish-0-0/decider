@@ -1,7 +1,6 @@
-import { nanoid } from 'nanoid';
 import { PlayerAction, PlayerActionTypes } from '../constants';
 interface Player {
-  username: string;
+  username: string | null;
   skill?: number;
   experience?: number;
   lfgs?: number;
@@ -17,7 +16,7 @@ interface PlayerReducer {
 const initState: PlayerReducer = {
   players: [],
   user: {
-    username: nanoid(10),
+    username: null,
   },
 };
 

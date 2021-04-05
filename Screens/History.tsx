@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View } from 'react-native';
+import { ScrollView, StyleSheet, Text } from 'react-native';
 
 interface HistoryProps {
 
@@ -7,8 +7,16 @@ interface HistoryProps {
 
 const History: React.FC<HistoryProps> = (props) => {
   return (
-    <View />
+    <ScrollView contentContainerStyle={styles.container}>
+      <Text>Your stats</Text>
+    </ScrollView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flexGrow: 1,
+  },
+});
 
 export default History;

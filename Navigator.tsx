@@ -1,9 +1,6 @@
 import * as React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import FeatherIcons from 'react-native-vector-icons/Feather';
-
-import People from './Screens/People';
 import Playground from './Screens/Playground';
 import History from './Screens/History';
 
@@ -24,15 +21,6 @@ const AppNavigation: React.FC<NavigationProps> = props => {
               color={color}
               size={size}
             />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="People"
-        component={People}
-        options={{
-          tabBarIcon: ({color, size}) => (
-            <FeatherIcons name="users" color={color} size={size} />
           ),
         }}
       />
