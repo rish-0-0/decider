@@ -1,12 +1,4 @@
-import { PlayerAction, PlayerActionTypes } from '../constants';
-interface Player {
-  username: string | null;
-  skill?: number;
-  experience?: number;
-  lfgs?: number;
-  name?: string;
-};
-interface Players extends Array<Player>{};
+import { PlayerAction, PlayerActionTypes, Player, Players } from '../constants';
 
 interface PlayerReducer {
   players: Players; // Array of Player 
