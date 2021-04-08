@@ -7,10 +7,12 @@ import {
 
 interface PlaygroundReducer {
   playgrounds: Playgrounds;
+  map: Map<string,number>;
 }
 
 const initState: PlaygroundReducer = {
   playgrounds: [],
+  map: new Map<string, number>(), // id to to array index map
 };
 
 export default function playgroundReducer(

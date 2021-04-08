@@ -32,6 +32,9 @@ export interface Playground {
   controller: string;
   players: Players;
   viewers: Players;
+  active: true;
+  createdAt: Date;
+  updatedAt: Date;
 }
 
 export interface Playgrounds extends Array<Playground>{};
