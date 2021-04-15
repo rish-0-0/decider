@@ -1,8 +1,8 @@
 import * as React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Playground from './Screens/Playground';
-import History from './Screens/History';
+import Playground from './Screens/Playground/Playgrounds';
+import History from './Screens/History/History';
 
 const Tabs = createBottomTabNavigator();
 
